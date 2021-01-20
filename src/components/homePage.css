@@ -1,7 +1,6 @@
 body {
-  /* background-image: linear-gradient(to left , #ca51f2, white); */
-  /* background-image: linear-gradient(to left, black, #403C3D); */
-  background-color: black ;
+  background-color: black;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .heart-logo {
@@ -15,18 +14,10 @@ body {
   margin-left: 1rem;
   font-family: "Oleo Script Swash Caps", cursive;
   font-size: 28px;
-  color: #499DF2;
+  color: #499df2;
   /* color: #bf0404; */
   /* color: #FE6084; */
 }
-
-/* .nav-list {
-  margin-top: 1rem;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 .left-header {
   display: flex;
@@ -41,9 +32,10 @@ body {
 }
 
 .nav {
-  color: black;
+  color: white;
   font-size: 20px;
   text-decoration: none;
+  margin-right: 2rem;
 }
 
 .nav:hover {
@@ -54,17 +46,39 @@ body {
 /* <img id='heart' src={heartSignup} alt='dogs'/> */
 
 .modal-button {
-  background-color: #499DF2;
-    border-color: #499DF2;
+  background-color: #499df2;
+  border-color: #499df2;
   color: white;
 }
 
 .button-log-sign {
-  background-color: #499DF2;
-  border-color: #499DF2;
+  background-color: #499df2;
+  border-color: #499df2;
   margin-left: 202px;
 }
 
-.home-text{
-color: #F2F2F2 ;
+.home-text {
+  color: #f2f2f2;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.image-home{
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    margin: 2rem auto
+}
+
+@media (max-width: 600px){
+    .heart-logo {
+        max-height: 40px;
+        max-width: 40px;
+        height: auto;
+        width: auto;
+    }
+    .text-logo {
+        margin-left: .5rem;
+        font-size: 20px;
+    }
 }

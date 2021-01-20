@@ -12,7 +12,7 @@ import { Nav, Navbar, Image } from "react-bootstrap";
 
 function HomePage() {
   const [loading, setLoading] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [currentUser, setCurrentUser] = useState();
   const [errorMessage, setErrorMessage] = useState(false);
   const [firstName, setFirstName] = useState("");
@@ -40,8 +40,8 @@ function HomePage() {
           }}
         >
           <div className=" container-fluid w-100  ">
-            <div className="row p-5">
-              <Navbar fixed="top"  className="mt-4">
+            <div className="row ">
+              <Navbar fixed="top"  className="mt-4 " block>
                 <Nav className="collapse navbar-collapse d-flex justify-content-between">
                   <div className="left-header">
                     <Image

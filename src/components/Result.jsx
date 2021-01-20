@@ -60,7 +60,7 @@ function Result(props) {
 
     return (
       <div className="container w-50 resultsCard" > 
-        <Card border="primary" id='result'>
+        <Card  id='result'>
           {/* <Card.Header></Card.Header> */}
           <Card.Body>
             <Card.Text className='mt-3 py-2 title' >{date}</Card.Text>
