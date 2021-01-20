@@ -19,7 +19,7 @@ import UserResults from './UserResults';
 function HomePage (){
 
     const [ loading , setLoading ] = useState( false );
-    const [ isLogin, setIsLogin ] = useState( false );
+    const [ isLogin, setIsLogin ] = useState( true );
     const [ currentUser, setCurrentUser ] = useState();
     const [ errorMessage, setErrorMessage ] = useState( false )
     const [ firstName, setFirstName ] = useState('')

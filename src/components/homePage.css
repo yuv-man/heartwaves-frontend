@@ -33,7 +33,14 @@ body{
 
 .right-header{
     display: flex;
-    flex-flow: row nowrap;    
+    flex-flow: row nowrap;
+    color: white; 
+    margin-right: 2rem;   
+}
+
+.right-header a{
+    color: white;
+    margin-right: 2rem;
 }
 
 
