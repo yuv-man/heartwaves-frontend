@@ -63,11 +63,33 @@ body {
 }
 
 .image-home{
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 170px;
+    max-height: 170px;
     width: auto;
     height: auto;
     margin: 2rem auto
+}
+
+.addTest{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  border: 3px solid#202648;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.testRight{
+  margin-right: 2rem;
+}
+
+.doctor{
+  max-height: 300px;
+  max-width: 300px;
+  height: auto;
+  width: auto;
 }
 
 @media (max-width: 600px){
@@ -80,5 +102,18 @@ body {
     .text-logo {
         margin-left: .5rem;
         font-size: 20px;
+    }
+    .addTest{
+      display: inline-flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      color: white;
+      align-items: center;
+      border: 3px solid#202648;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    .testRight{
+      margin: 2rem 0;
     }
 }

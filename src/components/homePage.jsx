@@ -54,24 +54,20 @@ function HomePage() {
                     <h2 className="text-logo">Heart Waves</h2>
                   </div>
                   <div className="right-header">
-                    {/* <div> */}
                     <Link className=" nav" to="/home">
                       Home
                     </Link>
-                    {/* </div> */}
                     {isLogin ? (
-                      // <div>
                       <Link className=" nav" to="/result">
                         Result
                       </Link>
-                    ) : // </div>
+                    ) : 
                     null}
                     {isLogin ? (
-                      // <div>
                       <Link className=" nav" to="/dashboard">
                         Dashboard
                       </Link>
-                    ) : // </div>
+                    ) : 
                     null}
                     {isLogin ? (
                       <Button
@@ -92,34 +88,6 @@ function HomePage() {
               </Navbar>
             </div>
           </div>
-          {/* <nav className = 'nav-bar'>
-        <div className = 'nav-list'>
-            <div className='left-header'>
-                <img className='heart-logo' src={heartLogo} alt='heart waves'/> */}
-          {/* <h2 className='text-logo'>Heart Waves</h2>
-            </div>
-            <div className='right-header'>
-                <div> */}
-          {/* <Link to="/home">Home</Link>
-                </div>
-                {isLogin ? (
-                    <div>
-                    <Link to="/result">Result</Link>
-                    </div>
-                ) : null}
-                {isLogin ? 
-                    <div>
-                    <Link to="/dashboard">Dashboard</Link>
-                </div> : null}
-            {isLogin? <input className='sign-up' type='submit' 
-                value='Log out' onClick={Logout}/> : <div>
-                    <Login/>
-                    <SignUp />
-                </div> 
-            }
-            </div>
-            </div>
-        </nav> */}
           <Switch>
             <Route path="/result">
               <Result />
