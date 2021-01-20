@@ -39,17 +39,18 @@ function HomePage (){
             <div className='left-header'>
                 <img className='heart-logo' src={heartLogo} alt='heart waves'/>
                 <h2 className='text-logo'>Heart Waves</h2>
-                </div>
+            </div>
+            <div className='right-header'>
                 <div>
                     <Link to="/home">Home</Link>
                 </div>
                 {isLogin ? (
-                  <div>
+                    <div>
                     <Link to="/result">Result</Link>
-                  </div>
+                    </div>
                 ) : null}
                 {isLogin ? 
-                  <div>
+                    <div>
                     <Link to="/dashboard">Dashboard</Link>
                 </div> : null}
             {isLogin? <input className='sign-up' type='submit' 
@@ -58,6 +59,7 @@ function HomePage (){
                     <SignUp />
                 </div> 
             }
+            </div>
             </div>
         </nav>
             <Switch>
