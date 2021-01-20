@@ -13,6 +13,9 @@ import SignUp from './Signup'
 import heartLogo from '../images/heartLogo.png'
 import { HeartContext } from '../libs/HeartContext'
 import './homePage.css'
+import Dashboard from "./Dashboard"
+import Result from './Result';
+import UserResults from './UserResults';
 
 
 function HomePage (){
@@ -45,8 +48,10 @@ function HomePage (){
                 <div className='right-header'>
                 {isLogin ? <div>
                     <Link to="/results">Results</Link>
-                </div> : null}
-                {isLogin ? <div>
+                    </div>
+                    : null}
+                {isLogin ? 
+                    <div>
                     <Link to="/dashboard">Dashboard</Link>
                 </div> : null}
             {isLogin? <input className='sign-up' type='submit' 
@@ -70,8 +75,8 @@ function HomePage (){
                 </Route>
             </Switch>
         </HeartContext.Provider>
-        </Router>
-    )
+    </Router>
+    );
 }
 
 export default HomePage;
