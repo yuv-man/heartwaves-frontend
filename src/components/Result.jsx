@@ -36,7 +36,7 @@ function Result(props) {
             label: 'Second Dataset',
             data: [28, 48, 40, 19, 86, 27, 90],
             fill: false,
-            borderColor: '#565656'
+            borderColor: '#FA5252'
         }
     ]
   };
@@ -44,12 +44,12 @@ function Result(props) {
   const options = {
     title: {
         display: true,
-        text: 'My Heart beats',
+        text: 'My Heart Beats',
         fontSize: 16
     },
     legend: {
         display: false,
-    }
+    },
   };
 
 
@@ -59,14 +59,14 @@ function Result(props) {
 
 
     return (
-      <div className="container w-50" > 
+      <div className="container w-50 resultsCard" > 
         <Card border="primary" id='result'>
           {/* <Card.Header></Card.Header> */}
           <Card.Body>
-            <Card.Title>{date}</Card.Title>
+            <Card.Text className='mt-3 py-2 title' >{date}</Card.Text>
             <Card.Text>Hey {firstName} </Card.Text>
             <Card.Text>Test result: </Card.Text>
-            <Chart type="line" data={data} options={options} />
+            <Chart className='chart' type="line" data={data} options={options} />
             
             <Link to="/">
               <Button className="button" onClick={backToDashboard}> Back </Button>
