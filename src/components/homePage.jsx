@@ -13,8 +13,6 @@ import SignUp from './Signup'
 import heartLogo from '../images/heartLogo.png'
 import { HeartContext } from '../libs/HeartContext'
 import './homePage.css'
-import Dashboard from "./Dashboard"
-import Result from './Result';
 import UserResults from './UserResults';
 
 
@@ -63,7 +61,7 @@ function HomePage (){
             </div>
         </nav>
             <Switch>
-                <Route path="/results">
+                <Route path="/result">
                     <Result />
                 </Route>
                 <Route path="/dashboard">

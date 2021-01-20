@@ -1,20 +1,16 @@
 import React, { useState } from 'react'
-<<<<<<< HEAD:src/components/Result.jsx
-import { Card, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-=======
 import { BrowserRouter as Link } from "react-router-dom";
 import { Card , Button } from "react-bootstrap";
+import "./result.css";
 
 
->>>>>>> 38758d8ea7dff1903afadcaa7e6775a2e88ec032:src/Result.js
 
 function Result(props) {
 
     return (
       <div className="container w-50 ">
-        <Card>
-          <Card.Header></Card.Header>
+        <Card border="primary" >
+          {/* <Card.Header></Card.Header> */}
           <Card.Body>
             <Card.Title>Date: </Card.Title>
             <Card.Text>Name: </Card.Text>
