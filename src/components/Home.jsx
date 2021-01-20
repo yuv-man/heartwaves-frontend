@@ -2,13 +2,13 @@ import React, { useState, useContext } from "react";
 import { HeartContext } from "../libs/HeartContext";
 
 function Home() {
-  const { isLogin, firstName } = useContext(HeartContext);
+    const { isLogin, firstName } = useContext(HeartContext);
 
-  return (
+    return (
     <div>
-      <h1>hello world</h1>
+        <h1>hello world</h1>
     </div>
-  );
+    );
 }
 
 export default Home;

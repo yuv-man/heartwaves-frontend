@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to left , #e4b2f5, white);
+    background-image: linear-gradient(to left , #ca51f2, white);
 }
 
 .heart-logo{
@@ -10,9 +10,10 @@ body{
 }
 
 .text-logo{
-    margin-left: 2rem;
-    font-family: 'Fascinate Inline', cursive;
-    color: rgb(69, 69, 201);
+    margin-left: 1rem;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 28px;
+    color: #499DF2;
 }
 
 .nav-list{
@@ -20,13 +21,20 @@ body{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .left-header{
     display: flex;
     flex-flow: row nowrap;
+    margin-left: 2rem;
+    align-items: center;
 }
 
-.left-header{
-    margin-left: 2rem;
+.right-header{
+    display: flex;
+    flex-flow: row nowrap;    
 }
+
+
+/* <img id='heart' src={heartSignup} alt='dogs'/> */
