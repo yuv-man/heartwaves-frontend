@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import UserResults from "./UserResults"
+import axios from 'axios'
+import { Row } from 'react-bootstrap'
 
-export default function Dashboard () {
+function Dashboard () {
     const [userResults, setUserResults] = useState([])
 
     useEffect(() => {
@@ -26,4 +28,6 @@ export default function Dashboard () {
 
     )
 }
+
+export default Dashboard
 

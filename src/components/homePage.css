@@ -1,3 +1,32 @@
 body{
-    background-color: blue;
+    background-image: linear-gradient(to left , #e4b2f5, white);
+}
+
+.heart-logo{
+    max-height: 70px;
+    max-width: 70px;
+    height: auto;
+    width:auto
+}
+
+.text-logo{
+    margin-left: 2rem;
+    font-family: 'Fascinate Inline', cursive;
+    color: rgb(69, 69, 201);
+}
+
+.nav-list{
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.left-header{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.left-header{
+    margin-left: 2rem;
 }

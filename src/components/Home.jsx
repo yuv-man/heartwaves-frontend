@@ -1,8 +1,9 @@
 import React, { useState,useContext } from 'react'
+import { HeartContext } from '../libs/HeartContext'
 
 function Home() {
 
-    const { isLogin, firstName } = useContext(DogContext);
+    const { isLogin, firstName } = useContext(HeartContext);
     
     return (
         <div>

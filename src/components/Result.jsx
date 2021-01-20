@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
+import { Card, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
-export default function Result(props) {
-
-
+function Result(props) {
 
     return (
         <div className="container w-50 ">
@@ -10,7 +10,6 @@ export default function Result(props) {
                 <Card.Header></Card.Header>
                 <Card.Body>
                     <Card.Title> </Card.Title>
-                    <Card.Img variant="top" id="petsPhoto" src={pet.picture} alt={pet.name} className="w-100 " />
                     <Card.Text> </Card.Text>
                     <Card.Text> </Card.Text>
                     <Card.Text></Card.Text>
@@ -28,3 +27,4 @@ export default function Result(props) {
     )
 }
 
+export default Result

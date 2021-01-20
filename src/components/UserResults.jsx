@@ -3,7 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import { BrowserRouter as Link } from "react-router-dom";
 
 
-export default function UserResults(props) {
+function UserResults(props) {
     const { date, name, result , _id } = props.result
 
 
@@ -27,3 +27,4 @@ export default function UserResults(props) {
     )
 }
 
+export default UserResults

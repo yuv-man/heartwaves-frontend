@@ -6,15 +6,17 @@ import {
     Link,
 } from "react-router-dom";
 import Home from './Home';
+import Result from './Result'
+import Dashboard from './Dashboard'
 import Login from './Login'
 import SignUp from './Signup'
 import heartLogo from '../images/heartLogo.png'
 import { HeartContext } from '../libs/HeartContext'
 import './homePage.css'
 
+
 function HomePage (){
 
-    
     const [ loading , setLoading ] = useState( false );
     const [ isLogin, setIsLogin ] = useState( false );
     const [ currentUser, setCurrentUser ] = useState();
@@ -23,7 +25,7 @@ function HomePage (){
 
     const Logout = () => {
         setIsLogin( false );
-        localStorage.setItem('token', null)
+        // localStorage.setItem('token', null)
     }
 
     return (
@@ -35,33 +37,37 @@ function HomePage (){
         <div className = 'nav-list'>
             <div className='left-header'>
                 <img className='heart-logo' src={heartLogo} alt='heart waves'/>
+                <h2 className='text-logo'>Heart Waves</h2>
+                </div>
                 <div>
                     <Link to="/home">Home</Link>
                 </div>
+                <div className='right-header'>
                 {isLogin ? <div>
                     <Link to="/results">Results</Link>
                 </div> : null}
                 {isLogin ? <div>
                     <Link to="/dashboard">Dashboard</Link>
                 </div> : null}
-            </div>
             {isLogin? <input className='sign-up' type='submit' 
-                value='Log out' onClick={Logout}/> : <div className='right-header'>
-                <Login/>
-                <SignUp />
-            </div>}
+                value='Log out' onClick={Logout}/> : <div>
+                    <Login/>
+                    <SignUp />
+                </div> 
+            }
+            </div>
         </div>
         </nav>
             <Switch>
-            <Route path="/results">
-                <Results />
-            </Route>
-            <Route path="/dashboard">
-                <Dashboard />
-            </Route>
-            <Route path="/">
-                <Home />
-            </Route>
+                <Route path="/results">
+                    <Result />
+                </Route>
+                <Route path="/dashboard">
+                    <Dashboard />
+                </Route>
+                <Route path="/">
+                    <Home />
+                </Route>
             </Switch>
         </HeartContext.Provider>
         </Router>
