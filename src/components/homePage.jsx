@@ -63,7 +63,7 @@ function HomePage (){
             </div>
         </nav>
             <Switch>
-                <Route path="/results">
+                <Route path="/result">
                     <Result />
                 </Route>
                 <Route path="/dashboard">

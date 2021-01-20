@@ -3,6 +3,8 @@ import Modal from 'react-modal'
 import { HeartContext } from '../libs/HeartContext'
 import { useHistory } from 'react-router-dom'
 import ClipLoader from "react-spinners/ClipLoader";
+import { Modal, Button, Form } from "react-bootstrap";
+
 // import heartSignup from '../images/heartSignup.png'
 
 function Signup() {

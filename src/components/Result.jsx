@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Link } from "react-router-dom";
 import { Card , Button } from "react-bootstrap";
+import "./result.css";
 
 
 
@@ -8,8 +9,8 @@ function Result(props) {
 
     return (
       <div className="container w-50 ">
-        <Card>
-          <Card.Header></Card.Header>
+        <Card border="primary" >
+          {/* <Card.Header></Card.Header> */}
           <Card.Body>
             <Card.Title>Date: </Card.Title>
             <Card.Text>Name: </Card.Text>
