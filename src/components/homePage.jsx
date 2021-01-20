@@ -11,6 +11,9 @@ import SignUp from './Signup'
 import heartLogo from '../images/heartLogo.png'
 import { HeartContext } from '../libs/HeartContext'
 import './homePage.css'
+import Dashboard from "./Dashboard"
+import Result from './Result';
+import UserResults from './UserResults';
 
 function HomePage (){
 
@@ -27,45 +30,71 @@ function HomePage (){
     }
 
     return (
-        <Router>
-        <HeartContext.Provider value = {{ isLogin, setIsLogin, 
-            currentUser, setCurrentUser, errorMessage, 
-            setErrorMessage, firstName, setFirstName, loading , setLoading }}>
-        <nav className = 'nav-bar'>
-        <div className = 'nav-list'>
-            <div className='left-header'>
-                <img className='heart-logo' src={heartLogo} alt='heart waves'/>
+      <Router>
+        <HeartContext.Provider
+          value={{
+            isLogin,
+            setIsLogin,
+            currentUser,
+            setCurrentUser,
+            errorMessage,
+            setErrorMessage,
+            firstName,
+            setFirstName,
+            loading,
+            setLoading,
+          }}
+        >
+          <nav className="nav-bar">
+            <div className="nav-list">
+              <div className="left-header">
+                <img className="heart-logo" src={heartLogo} alt="heart waves" />
                 <div>
-                    <Link to="/home">Home</Link>
+                  <Link to="/home">Home</Link>
                 </div>
-                {isLogin ? <div>
+                {isLogin ? (
+                  <div>
                     <Link to="/results">Results</Link>
-                </div> : null}
-                {isLogin ? <div>
+                  </div>
+                ) : null}
+                {isLogin ? (
+                  <div>
                     <Link to="/dashboard">Dashboard</Link>
-                </div> : null}
+                  </div>
+                ) : null}
+              </div>
+              {isLogin ? (
+                <input
+                  className="sign-up"
+                  type="submit"
+                  value="Log out"
+                  onClick={Logout}
+                />
+              ) : (
+                <div className="right-header">
+                  <Login />
+                  <SignUp />
+                </div>
+              )}
             </div>
-            {isLogin? <input className='sign-up' type='submit' 
-                value='Log out' onClick={Logout}/> : <div className='right-header'>
-                <Login/>
-                <SignUp />
-            </div>}
-        </div>
-        </nav>
-            <Switch>
-            <Route path="/results">
-                <Results />
+          </nav>
+          <Switch>
+            <Route path="/result">
+              <Result />
+            </Route>
+            <Route path="/userresults">
+              <UserResults />
             </Route>
             <Route path="/dashboard">
-                <Dashboard />
+              <Dashboard />
             </Route>
             <Route path="/">
-                <Home />
+              <Home />
             </Route>
-            </Switch>
+          </Switch>
         </HeartContext.Provider>
-        </Router>
-    )
+      </Router>
+    );
 }
 
 export default HomePage;
