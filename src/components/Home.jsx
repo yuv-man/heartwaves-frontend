@@ -5,8 +5,8 @@ function Home() {
     const { isLogin, firstName } = useContext(HeartContext);
 
     return (
-    <div>
-        <h1>hello world</h1>
+    <div className="container mt-4"> 
+        <h1 className="home-text">hello world</h1>
     </div>
     );
 }
