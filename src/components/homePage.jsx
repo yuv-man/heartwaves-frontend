@@ -9,6 +9,7 @@ import heartLogo from "../images/heartLogo.png";
 import { HeartContext } from "../libs/HeartContext";
 import "./homePage.css";
 import { Nav, Navbar, Image } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 function HomePage() {
   const [loading, setLoading] = useState(false);
@@ -41,7 +42,7 @@ function HomePage() {
         >
           <div className=" container-fluid w-100  ">
             <div className="row p-5">
-              <Navbar fixed="top"  className="mt-4">
+              <Navbar fixed="top" className="mt-4">
                 <Nav className="collapse navbar-collapse d-flex justify-content-between">
                   <div className="left-header">
                     <Image
@@ -73,12 +74,13 @@ function HomePage() {
                     ) : // </div>
                     null}
                     {isLogin ? (
-                      <input
+                      <Button
                         className="sign-up"
                         type="submit"
-                        value="Log out"
                         onClick={Logout}
-                      />
+                      >
+                        Log out{" "}
+                      </Button>
                     ) : (
                       <form className="form-inline my-2 my-lg-0 float-end">
                         <Login />
