@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import UserResults from "./UserResults"
 import axios from "axios";
 import { Row } from "react-bootstrap";

@@ -54,7 +54,7 @@ function HomePage (){
                 </div>
                 {isLogin ? (
                   <div>
-                    <Link to="/results">Results</Link>
+                    <Link to="/result">Result</Link>
                   </div>
                 ) : null}
                 {isLogin ? (
