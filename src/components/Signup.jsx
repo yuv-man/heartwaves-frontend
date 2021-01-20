@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from 'react'
-import Modal from 'react-modal'
 import { HeartContext } from '../libs/HeartContext'
 import { useHistory } from 'react-router-dom'
 import ClipLoader from "react-spinners/ClipLoader";
