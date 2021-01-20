@@ -45,13 +45,13 @@ function HomePage (){
                 <div>
                     <Link to="/home">Home</Link>
                 </div>
-                <div className='right-header'>
-                {isLogin ? <div>
-                    <Link to="/results">Results</Link>
-                    </div>
-                    : null}
+                {isLogin ? (
+                  <div>
+                    <Link to="/result">Result</Link>
+                  </div>
+                ) : null}
                 {isLogin ? 
-                    <div>
+                  <div>
                     <Link to="/dashboard">Dashboard</Link>
                 </div> : null}
             {isLogin? <input className='sign-up' type='submit' 
@@ -61,7 +61,6 @@ function HomePage (){
                 </div> 
             }
             </div>
-        </div>
         </nav>
             <Switch>
                 <Route path="/results">

@@ -14,7 +14,7 @@ function UserResults(props) {
                 <Card.Body>
                     <Card.Title> Name: {name}</Card.Title>
                     <Card.Text> Test results:{result} </Card.Text>
-                    <Link variant="primary" to={`/result/${_id}`}>
+                    <Link variant="primary" to="/result">
                         <Button className="button">
                             see more
                     </Button>

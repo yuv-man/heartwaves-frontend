@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
+=======
+import React, { useState , useEffect } from 'react'
+>>>>>>> d3101bc9b121b8cf81218fd7fd87e75fba671fc8
 import UserResults from "./UserResults"
 <<<<<<< HEAD:src/components/Dashboard.jsx
 import axios from 'axios'
