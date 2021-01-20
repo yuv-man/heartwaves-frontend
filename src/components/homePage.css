@@ -36,5 +36,28 @@ body{
     flex-flow: row nowrap;    
 }
 
+.nav {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
 
+.nav:hover {
+  color: darkgray;
+  font-size: 20px;
+  text-decoration: none;
+}
 /* <img id='heart' src={heartSignup} alt='dogs'/> */
+
+.modal-button{
+    /* background-color: #CDE3C8;
+    border-color: #CDE3C8; */
+    color: white;
+}
+
+.button-log-sign {
+    background-color: #1865FF;
+    border-color: #1865FF;
+        margin-left: 202px;
+
+}
