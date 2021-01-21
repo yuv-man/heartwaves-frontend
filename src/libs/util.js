@@ -39,4 +39,18 @@ const postData = async(formData) => {
     }
 }
 
-export { signup, postData }
+const postRecords = async() => {
+
+    try{
+        const response = await fetch(`${BASE_URL}/api/petients/my-records`, { 
+            method:'POST',
+            credentials: "include",
+            })
+        const data = await response.json()
+        return data
+    } catch (err){
+        console.log(err)
+    }
+}
+
+export { signup, postData, postRecords }

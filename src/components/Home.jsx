@@ -6,7 +6,7 @@ import doctor from '../images/doctor.png'
 import { postData } from '../libs/util'
 
 function Home() {
-    const { isLogin, firstName } = useContext(HeartContext);
+    const { isLogin, firstName,testResult, setTestResult } = useContext(HeartContext);
     const [ testFile, setTestFile ] = useState()
 
     const handleFile = (event) => {
@@ -19,8 +19,9 @@ function Home() {
     const addTest = async(event) => {
         event.preventDefault()
         let formData = new FormData(); 
-        formData.append('testFile', testFile);
+        formData.append('heart-graph', testFile);
         const result = await postData(formData)
+        setTestResult(result)
         console.log(result)
     }
 

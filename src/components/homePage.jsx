@@ -17,7 +17,8 @@ function HomePage() {
   const [isLogin, setIsLogin] = useState(true);
   const [currentUser, setCurrentUser] = useState();
   const [errorMessage, setErrorMessage] = useState(false);
-  const [firstName, setFirstName] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [testResult, setTestResult] = useState()
 
   const Logout = () => {
     setIsLogin(false);
@@ -25,7 +26,7 @@ function HomePage() {
   };
 
   return (
-    <>
+    <div>
       <Router>
         <HeartContext.Provider
           value={{
@@ -34,11 +35,13 @@ function HomePage() {
             currentUser,
             setCurrentUser,
             errorMessage,
-            setErrorMessage,
-            firstName,
-            setFirstName,
+            setErrorMessage, 
+            fullName,
+            setFullName,
             loading,
             setLoading,
+            testResult, 
+            setTestResult
           }}
         >
           <div className=" container-fluid w-100  ">
@@ -126,7 +129,7 @@ function HomePage() {
           </Switch>
         </HeartContext.Provider>
       </Router>
-    </>
+    </div>
   );
 }
 

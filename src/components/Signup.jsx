@@ -8,7 +8,7 @@ import "./homePage.css";
 
 function Signup() {
   const { setIsLogin, errorMessage, setErrorMessage, 
-        setFirstName, loading, setLoading } = useContext(HeartContext);
+        setFullName, loading, setLoading } = useContext(HeartContext);
   const [ userProfile, setUserProfile ] = useState({firstName: '', 
         lastName: '',  phone: '', password:'', email:'', confirmPassword: ''});
   const [ isOpen, setIsOpen ] = useState( false );
@@ -43,7 +43,7 @@ function Signup() {
 
           setLoading(false)
       } else {
-        console.log(result)
+        setFullName(result.fullName)
         setIsOpen( false )
         setIsLogin( true )
         setUserProfile({firstName: '', lastName: '', phoneNumber: '',
