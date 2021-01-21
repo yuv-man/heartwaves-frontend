@@ -9,8 +9,7 @@ function Login() {
   const [modalLogIn, setModalLogIn] = useState(false);
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
-
-    
+  const BASE_URL = 'http://localhost:3001'   
     
   const openModalLogIn = () => setModalLogIn(true);
 
@@ -18,28 +17,20 @@ function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    //   const response = await axios.post(
-    //     "http://localhost:5000/api/user/login",
-    //     {
-    //       email: email,
-    //       password: password,
-    //     }
-    //   );
-
-    //   const logIn = await axios.post(
-    //     "http://localhost:5000/api/user/login",
-    //     {
-    //       email: email,
-    //       password: password,
-    //     }
-    //   );
-    //   if (logIn.status === 200) {
-    //     localStorage.setItem("token", response.data);
-    //   }
+      const response = await fetch(`${BASE_URL}/api/user/sign-in`,{
+        method: 'POST',
+        credentials: "include",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: email, password: password})
+      });
+      if(response.ok){
+        localStorage.setItem("token", response.data);
+      }
       setModalLogIn(false);
       setIsLogin(true)
-    //   history.push("/");
-    //   const reload = window.location.reload();
+      history.push("/");
   };
 
   return (
