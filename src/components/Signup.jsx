@@ -10,13 +10,10 @@ function Signup() {
   const { setIsLogin, errorMessage, setErrorMessage, 
         setFirstName, loading, setLoading } = useContext(HeartContext);
   const [ userProfile, setUserProfile ] = useState({firstName: '', 
-        lastName: '',  phoneNumber: '', password:'', email:'' });
+        lastName: '',  phone: '', password:'', email:'', confirmPassword: ''});
   const [ isOpen, setIsOpen ] = useState( false );
-  const [ confirmPassword, setConfirmPassword ] = useState('');
   const [ message, setMessage ] = useState('')
   const history = useHistory()
-
-  const BASE_URL = 'http://localhost:3001'
 
   const handleChange = (event) => {    
     setUserProfile((userProfile) => ({ ...userProfile, [event.target.name]: event.target.value }))
@@ -28,66 +25,31 @@ function Signup() {
 
   const handleModalClose = () => {
       setIsOpen( false )
-      setUserProfile({firstName: '', lastName: '', phoneNumber: '',
-              password:'', email:''});
-      setConfirmPassword('');
+      setUserProfile({firstName: '', lastName: '', phone: '',
+              password:'', email:'', confirmPassword:''});
       setErrorMessage( false )
   }
 
-  const checkPassword = async () => {
-      if(userProfile.password === confirmPassword){
-          const result = await signup( 
-              userProfile.firstName, userProfile.lastName,
-              userProfile.email, userProfile.phoneNumber, userProfile.password)
-          console.log(result)
-          setIsOpen(false);
-  //         if(typeof result === 'object'){
-  //             console.log(result[0])
-  //             createToken( userProfile.email );
-  //             localStorage.setItem('currentUser', result[0])
-  //             setFirstName(userProfile.firstName)
-  //             setIsOpen( false )
-  //             setIsLogin( true )
-  //             setUserProfile({firstName: '', lastName: '', phoneNumber: '',
-  //                 password:'', email:''});
-  //             setConfirmPassword('');
-  //             history.push('/')
-
-  //         }else{
-  //             setMessage(result)
-  //             setErrorMessage( true )
-  //         }
-      } else {
-          setMessage('Confirmation password is not correct')
-          setErrorMessage( true )
-      }
-  }
-        
-
-  const handleModalSubmit = (event) => {
+  const handleModalSubmit = async(event) => {
       event.preventDefault();
-      if(!userProfile.firstName){
-          setMessage('first name is missing')
-          setErrorMessage( true )
-      } else if (!userProfile.lastName){
-          setMessage('last name is missing')
-          setErrorMessage( true )
-      } else if (!userProfile.phoneNumber){
-          setMessage('phone number is missing')
-          setErrorMessage( true )
-      } else if (!userProfile.email){
-          setMessage('email is missing')
-          setErrorMessage( true )
-      } else if (!userProfile.password){
-          setMessage('password is missing')
-          setErrorMessage( true )
-      } else {
           setLoading( true )
-          checkPassword()
+          const result = await signup( 
+            userProfile.firstName, userProfile.lastName,
+            userProfile.email, userProfile.phoneNumber, userProfile.password,
+            userProfile.confirmPassword)
+          if(result.errors){
+            console.log(result)
+
+
           setLoading(false)
+      } else {
+        console.log(result)
+        setIsOpen( false )
+        setIsLogin( true )
+        setUserProfile({firstName: '', lastName: '', phoneNumber: '',
+        password:'', email:'', confirmPassword:''});
+        history.push('/')
       }
-      console.log(userProfile);
-      // setIsOpen(false);
   }
 
   useEffect(() => {
@@ -118,7 +80,6 @@ function Signup() {
                 <Form.Control
                   type="text"
                   name="firstName"
-                  //   placeholder="Your First Name..."
                   required
                   value={userProfile.firstName}
                   onChange={handleChange}
@@ -128,7 +89,6 @@ function Signup() {
                 <Form.Label>Last Name</Form.Label>
                 <Form.Control
                   type="text"
-                  //   placeholder="Your Last Name..."
                   name="lastName"
                   value={userProfile.lastName}
                   required
@@ -140,7 +100,6 @@ function Signup() {
                 <Form.Control
                   className="inputs"
                   type="email"
-                  //   placeholder="Your Email..."
                   name="email"
                   value={userProfile.email}
                   required
@@ -161,9 +120,10 @@ function Signup() {
                 <Form.Label>Confirm Password</Form.Label>
                 <Form.Control
                   className="inputs"
+                  name="confirmPassword"
                   type="password"
-                  value={confirmPassword}
-                  onChange={(event) => setConfirmPassword(event.target.value)}
+                  value={userProfile.confirmPassword}
+                  onChange={handleChange}
                 />
               </Form.Group>
               <Form.Group id="phoneNumber">
@@ -188,7 +148,7 @@ function Signup() {
               >
                 Log In
               </Button>
-              <h3 className="error">{message}</h3>
+              {{message}? <h3 className='error' >{message}</h3>: null}
             </Form>
           </Modal.Body>
         </Modal>
