@@ -91,6 +91,7 @@ body {
 
 .testRight {
   margin-right: 2rem;
+  align-items: center;
 }
 
 .doctor {
@@ -113,6 +114,12 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.file{
+  margin: 1rem auto;
+  border: 2px solid #202648;
+  width: 15rem
 }
 
 @media (max-width: 600px) {

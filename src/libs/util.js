@@ -24,6 +24,19 @@ const signup = async( firstName, lastName, email, phone, password, confirmPasswo
     }
 }
 
+const postData = async(formData) => {
 
+    try{
+        const response = await fetch(`${BASE_URL}/api/petients/upload-heart-graph`, { 
+            method:'POST',
+            credentials: "include",
+            body: formData,
+            })
+        const data = await response.json()
+        return data
+    } catch (err){
+        console.log(err)
+    }
+}
 
-export { signup }
+export { signup, postData }
