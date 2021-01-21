@@ -1,8 +1,34 @@
 @media (max-width: 414px) {
+  body {
+    width: 414px;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    color: white;
+    display: inline-block;
+  }
+
+  #collasible-nav-dropdown {
+    color: white;
+    margin-right: 27px;
+  }
 
 
+  .mobile-link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-left: 12px;
+  }
 
+  .mobile-link:hover{
+         text-decoration: none;
+         color: #499df2;
+    /* background-color: #0F143A; */
+ 
+  }
 
-
-
+  .right-header {
+    display: none;
+  }
 }

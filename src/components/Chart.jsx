@@ -1,5 +1,6 @@
 import React from 'react';
 import { Chart } from 'primereact/chart';
+import './result.css'
 
 const ChartData = () => {
 

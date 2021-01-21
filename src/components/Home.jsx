@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { HeartContext } from "../libs/HeartContext";
 import { Card, Row, Button } from "react-bootstrap";
-import heartHome from '../images/heart-pulse.png'
+import heartHome from '../images/heart-home.png'
 import doctor from '../images/doctor.png'
 
 

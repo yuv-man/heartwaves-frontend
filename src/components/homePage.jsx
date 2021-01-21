@@ -8,8 +8,11 @@ import SignUp from "./Signup";
 import heartLogo from "../images/heartLogo.png";
 import { HeartContext } from "../libs/HeartContext";
 import "./homePage.css";
-import { Nav, Navbar, Image } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import "./mobile.css";
+import { Nav, Navbar, Image, Button, NavDropdown } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { bars } from "@fortawesome/free-solid-svg-icons";
+
 
 function HomePage() {
   const [loading, setLoading] = useState(false);
@@ -83,6 +86,32 @@ function HomePage() {
                         <SignUp />
                       </form>
                     )}
+                  </div>
+                  <div className="mobile-nav">
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                      <Nav className="mr-auto">
+                        {/* <FontAwesomeIcon icon={["far", "bars"]} /> */}
+                        <NavDropdown title="menu" id="collasible-nav-dropdown">
+                          <Link className="mobile-link" to="/home">
+                            Home
+                          </Link>
+                          <Link className="mobile-link" to="/result">
+                            Result
+                          </Link>
+                          <Link className="mobile-link" to="/dashboard">
+                            Dashboard
+                          </Link>
+                          {/* <NavDropdown.Item href="#home">Home</NavDropdown.Item>
+                          <NavDropdown.Item href="#result">
+                            Result
+                          </NavDropdown.Item>
+                          <NavDropdown.Item href="#dashboard">
+                            Dashboard
+                          </NavDropdown.Item> */}
+                        </NavDropdown>
+                      </Nav>
+                    </Navbar.Collapse>
                   </div>
                 </Nav>
               </Navbar>
