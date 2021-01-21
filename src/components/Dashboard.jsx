@@ -24,7 +24,7 @@ function Dashboard () {
       <div className="container  my-5">
         <Row>
                 <Col >
-                    <h1>Last result</h1>
+                    <h1>Updated result</h1>
             <Card className="results-card">
               <Card.Body>
                 <Card.Title>Date: </Card.Title>
@@ -36,7 +36,7 @@ function Dashboard () {
             </Card>
           </Col>
                 <Col>
-                    <h1>History results</h1>
+                    <h1>History</h1>
             <Row>
               {/* {userResults.map((result) => (
                 <UserResults key={result.id} result={result} />

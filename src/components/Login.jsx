@@ -38,7 +38,7 @@ function Login() {
   return (
     <>
       <Button
-        className="modal-button btn btn-primary my-2 my-sm-0 mx-3"
+        className="button-log-sign btn btn-primary my-2 my-sm-0 mx-3"
         type="button"
         onClick={openModalLogIn}
       >
@@ -73,7 +73,7 @@ function Login() {
             </Form.Group>
             <Button
               onClick={handleSubmit}
-              className="button-log-sign"
+              className="log-sign"
               type="submit"
             >
               Log In{" "}
