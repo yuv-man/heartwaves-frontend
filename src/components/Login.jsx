@@ -45,12 +45,11 @@ function Login() {
   return (
     <>
       <Button
-        className="modal-button btn btn-secondary my-2 my-sm-0 mx-3"
+        className="modal-button btn btn-primary my-2 my-sm-0 mx-3"
         type="button"
         onClick={openModalLogIn}
       >
-        {" "}
-        Log In{" "}
+        Log In
       </Button>
       {/* <ClipLoader loading={loading} /> */}
       <Modal show={modalLogIn} onHide={handleClose}>

@@ -10,13 +10,15 @@ body {
   width: auto;
 }
 
+.collapse .navbar-collapse .d-flex .justify-content-between .navbar-nav {
+  position: relative;
+}
+
 .text-logo {
   margin-left: 1rem;
   font-family: "Oleo Script Swash Caps", cursive;
   font-size: 28px;
   color: #499df2;
-  /* color: #bf0404; */
-  /* color: #FE6084; */
 }
 
 .left-header {
@@ -29,6 +31,12 @@ body {
 .right-header {
   display: flex;
   flex-flow: row nowrap;
+  right: 147px;
+  position: absolute;
+}
+
+.form-inline {
+  margin-right: -110px;
 }
 
 .nav {
@@ -43,21 +51,17 @@ body {
   font-size: 20px;
   text-decoration: none;
 }
-/* <img id='heart' src={heartSignup} alt='dogs'/> */
+
 .navbar-light .navbar-nav .nav-link {
   color: white;
   display: none;
 }
 
 .modal-button {
-  background-color: #499df2;
-  border-color: #499df2;
   color: white;
 }
 
 .button-log-sign {
-  background-color: #499df2;
-  border-color: #499df2;
   margin-left: 202px;
 }
 
@@ -95,6 +99,11 @@ body {
   height: auto;
   width: auto;
   margin-right: 32px;
+}
+
+.sign-up {
+  right: -96px;
+  position: absolute;
 }
 
 @media (max-width: 600px) {
