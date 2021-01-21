@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .heart-logo {
@@ -44,6 +44,10 @@ body {
   text-decoration: none;
 }
 /* <img id='heart' src={heartSignup} alt='dogs'/> */
+.navbar-light .navbar-nav .nav-link {
+  color: white ;
+  display: none;
+}
 
 .modal-button {
   background-color: #499df2;
@@ -59,26 +63,26 @@ body {
 
 .home-text {
   color: #f2f2f2;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-.image-home{
-    max-width: 150px;
-    max-height: 150px;
-    width: auto;
+.image-home {
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  margin: 2rem auto;
+}
+
+@media (max-width: 600px) {
+  .heart-logo {
+    max-height: 40px;
+    max-width: 40px;
     height: auto;
-    margin: 2rem auto
-}
-
-@media (max-width: 600px){
-    .heart-logo {
-        max-height: 40px;
-        max-width: 40px;
-        height: auto;
-        width: auto;
-    }
-    .text-logo {
-        margin-left: .5rem;
-        font-size: 20px;
-    }
+    width: auto;
+  }
+  .text-logo {
+    margin-left: 0.5rem;
+    font-size: 20px;
+  }
 }

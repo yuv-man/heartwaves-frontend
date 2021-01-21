@@ -1,4 +1,15 @@
+
 .results-card{
-    color: white;
-    background-color: white;
+    background-color: #0F143A;
+        color: white;
+
 }
+
+
+@media (max-width: 414px) {
+.results-card{
+    margin-left: 64px;
+    margin-top: 10px;
+}
+}
+

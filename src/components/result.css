@@ -1,19 +1,31 @@
-#result{
-    border-radius: 10px;
-    color: white;
-    background-color: #0F143A
+#result {
+  border-radius: 10px;
+  color: white;
+  background-color: #0f143a;
 }
 
-.chart{
-    margin: 2rem auto;
-    width: 90%;
+.chart {
+  margin: 2rem auto;
+  width: 90%;
 }
 
-.title{
+.title {
+  font-size: 16px;
+  /* border: 1px solid white; */
+  border-radius: 10px;
 
-    font-size: 16px;
-    /* border: 1px solid white; */
-    border-radius: 10px;
+  background-color: #202648;
+}
 
-    background-color: #202648;
+@media (max-width: 414px) {
+  #result {
+    width: 355px;
+    height: 550px;
+  }
+
+  .resultsCard{
+    margin-right: 174px;
+    margin-top: 20px;
+
+  }
 }
