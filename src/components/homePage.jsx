@@ -10,9 +10,7 @@ import { HeartContext } from "../libs/HeartContext";
 import "./homePage.css";
 import "./mobile.css";
 import { Nav, Navbar, Image, Button, NavDropdown } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { bars } from "@fortawesome/free-solid-svg-icons";
-
+import { FaBars } from 'react-icons/fa'
 
 function HomePage() {
   const [loading, setLoading] = useState(false);
@@ -58,7 +56,7 @@ function HomePage() {
                   </div>
                   <div className="right-header">
                     <Link className=" nav" to="/home">
-                      Home
+                      Home 
                     </Link>
                     {isLogin ? (
                       <Link className=" nav" to="/result">
@@ -78,7 +76,7 @@ function HomePage() {
                         type="submit"
                         onClick={Logout}
                       >
-                        Log out{" "}
+                        Log out
                       </Button>
                     ) : (
                       <form className="form-inline my-2 my-lg-0 float-end">
@@ -91,8 +89,9 @@ function HomePage() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                       <Nav className="mr-auto">
-                        {/* <FontAwesomeIcon icon={["far", "bars"]} /> */}
-                        <NavDropdown title="menu" id="collasible-nav-dropdown">
+                        
+                        <NavDropdown className='navDropdown' title={<FaBars/>} >
+                          
                           <Link className="mobile-link" to="/home">
                             Home
                           </Link>

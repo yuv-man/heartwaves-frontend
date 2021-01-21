@@ -31,4 +31,8 @@
   .right-header {
     display: none;
   }
+  .navDropdown{
+    color: white;
+  }
+
 }

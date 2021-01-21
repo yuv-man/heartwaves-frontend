@@ -66,7 +66,6 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-<<<<<<< HEAD
 .image-home{
     max-width: 170px;
     max-height: 170px;
@@ -122,25 +121,3 @@ body {
       margin: 2rem 0;
     }
 }
-=======
-.image-home {
-  max-width: 150px;
-  max-height: 150px;
-  width: auto;
-  height: auto;
-  margin: 2rem auto;
-}
-
-@media (max-width: 600px) {
-  .heart-logo {
-    max-height: 40px;
-    max-width: 40px;
-    height: auto;
-    width: auto;
-  }
-  .text-logo {
-    margin-left: 0.5rem;
-    font-size: 20px;
-  }
-}
->>>>>>> 8cf29908b24b93ea3d43a3b023129dee51c26184
