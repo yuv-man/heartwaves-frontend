@@ -8,7 +8,7 @@ import "./result.css";
 
 function Result(props) {
 
-  const { firstName, isLogin } = useContext(HeartContext)
+  const { firstName } = useContext(HeartContext)
   const [date, setDate] = useState()
   const history = useHistory()
 
@@ -44,7 +44,6 @@ function Result(props) {
   const options = {
     title: {
         display: true,
-        position: 'bottom',
         text: 'My Heart Beats',
         fontSize: 16
     },
@@ -55,12 +54,8 @@ function Result(props) {
 
 
   useEffect(() => {
-    if(isLogin){
-      time()
-    } else {
-      history.push('/')
-    }
-  }, [isLogin])
+    time()
+  }, [])
 
 
     return (
@@ -68,7 +63,7 @@ function Result(props) {
         <Card  id='result'>
           {/* <Card.Header></Card.Header> */}
           <Card.Body>
-            <Card.Title>Hello {firstName} </Card.Title>
+            <Card.Title>Hey {firstName} </Card.Title>
             <Card.Title>Test result: </Card.Title>
             <Card.Text className='mt-3 py-2 title' >{date}</Card.Text>
             <Chart className='chart' type="line" data={data} options={options} />
