@@ -14,7 +14,9 @@
   /* border: 1px solid white; */
   border-radius: 10px;
 
-  background-color: #202648;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #202648;
 }
 
 @media (max-width: 414px) {
