@@ -30,7 +30,7 @@ function Login() {
       }
       setModalLogIn(false);
       setIsLogin(true)
-      history.push("/");
+    //   history.push("/");
   };
 
   return (
