@@ -10,7 +10,7 @@ const signup = async( firstName, lastName, email, phoneNumber, password) =>{
         body: JSON.stringify({ firstName, lastName, email, phoneNumber, password })
     })
     let returnResponse
-        returnResponse = response.text()
+        returnResponse = response.json()
         const result = await returnResponse
     if (!response.ok){
         return result
