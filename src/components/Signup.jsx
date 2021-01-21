@@ -178,8 +178,8 @@ function Signup() {
                 />
               </Form.Group>
               <Button
-                className="button-log-sign "
-                id="sign-in"
+                className="sign-up "
+                id="sign-up"
                 type="submit"
                 onClick={(event) => {
                   handleModalSubmit(event);
@@ -188,7 +188,7 @@ function Signup() {
               >
                 Log In
               </Button>
-              <h3 className='error' >{message}</h3>
+              <h3 className="error">{message}</h3>
             </Form>
           </Modal.Body>
         </Modal>

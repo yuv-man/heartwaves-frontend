@@ -61,8 +61,8 @@ body {
   color: white;
 }
 
-.button-log-sign {
-  margin-left: 202px;
+.log-sign .sign-up {
+  margin-left: 200px;
 }
 
 .home-text {
@@ -101,7 +101,7 @@ body {
   margin-right: 32px;
 }
 
-.sign-up {
+.Logout {
   right: -96px;
   position: absolute;
 }
@@ -128,6 +128,7 @@ body {
     font-size: 20px;
   }
   .addTest {
+        margin-top: 39px;
     display: inline-flex;
     flex-flow: column nowrap;
     justify-content: center;

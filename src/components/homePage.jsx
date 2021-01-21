@@ -69,11 +69,7 @@ function HomePage() {
                       </Link>
                     ) : null}
                     {isLogin ? (
-                      <Button
-                        className="sign-up"
-                        type="submit"
-                        onClick={Logout}
-                      >
+                      <Button className="Logout" type="submit" onClick={Logout}>
                         Log out
                       </Button>
                     ) : (
@@ -87,25 +83,28 @@ function HomePage() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                       <Nav className="mr-auto">
-                        <NavDropdown className="navDropdown" title={<FaBars className="nav-icon"/>}>
+                        <NavDropdown
+                          className="navDropdown"
+                          title={<FaBars className="nav-icon" />}
+                        >
                           <div className="navDropdown-box">
                             <Link className="mobile-link" to="/home">
-                              Home
+                              {" "}
+                              Home{" "}
                             </Link>
-                            <Link className="mobile-link" to="/result">
-                              Result
-                            </Link>
-                            <Link className="mobile-link" to="/dashboard">
-                              Dashboard
-                            </Link>
+                            {isLogin ? (
+                              <Link className=" mobile-link" to="/result">
+                                {" "}
+                                Result{" "}
+                              </Link>
+                            ) : null}
+                            {isLogin ? (
+                              <Link className=" mobile-link" to="/dashboard">
+                                {" "}
+                                Dashboard{" "}
+                              </Link>
+                            ) : null}
                           </div>
-                          {/* <NavDropdown.Item href="#home">Home</NavDropdown.Item>
-                          <NavDropdown.Item href="#result">
-                            Result
-                          </NavDropdown.Item>
-                          <NavDropdown.Item href="#dashboard">
-                            Dashboard
-                          </NavDropdown.Item> */}
                         </NavDropdown>
                       </Nav>
                     </Navbar.Collapse>

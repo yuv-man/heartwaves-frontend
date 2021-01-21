@@ -12,16 +12,47 @@
     color: white;
     margin-right: 23px;
   }
-  /* .navDropdown-box{
-     margin-right: 27px;
-   
-} */
 
+  .nav {
+    display: none;
+  }
 
-.nav-icon{
+  .nav:hover {
+    display: none;
+  }
+
+  .modal-button {
     color: white;
-background-color: black;
+    position: absolute;
+    top: 15px;
+    right: -49px;
+  }
+
+  .button-log-sign {
+    /* margin-left: 202px; */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+.log-sign .sign-up {
+  margin-left: 123px;
 }
+
+.home-text{
+        margin-top: 39px;
+}
+
+  .Logout {
+    top: 15px;
+    right: 10px;
+    position: absolute;
+  }
+
+  .nav-icon {
+    color: white;
+    background-color: black;
+  }
 
   .nav-icon:hover {
     color: white;
@@ -51,13 +82,12 @@ background-color: black;
     margin-left: 12px;
   }
 
-  .mobile-link:hover{
-        text-decoration: none;
-        color: #499df2;
-
+  .mobile-link:hover {
+    text-decoration: none;
+    color: #499df2;
   }
 
-  .right-header {
+  .right-header:not(.Logout, .button-log-sign, .modal-button) {
     display: none;
   }
 }
