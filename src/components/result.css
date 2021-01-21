@@ -11,23 +11,19 @@
 
 .title {
   font-size: 16px;
-  /* border: 1px solid white; */
   border-radius: 10px;
   font-size: 16px;
   border-radius: 10px;
   background-color: #202648;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 600px) {
   #result {
     width: 355px;
     height: 550px;
   }
 
   .resultsCard {
-    /* margin-right: 220px;
-    margin-top: 20px;
-        margin-left: -4px; */
         margin: 20px 220px 0 -4px;
 
   }
