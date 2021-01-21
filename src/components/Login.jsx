@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import ClipLoader from "react-spinners/ClipLoader";
 import { HeartContext } from "../libs/HeartContext";
+import { useHistory } from 'react-router-dom'
 import "./homePage.css";
 
 function Login() {
@@ -9,6 +10,7 @@ function Login() {
   const [modalLogIn, setModalLogIn] = useState(false);
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
+  const history = useHistory()
   const BASE_URL = 'http://localhost:3001'   
     
   const openModalLogIn = () => setModalLogIn(true);
@@ -17,7 +19,7 @@ function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-      const response = await fetch(`${BASE_URL}/api/user/sign-in`,{
+      const response = await fetch(`${BASE_URL}/api/users/sign-in`,{
         method: 'POST',
         credentials: "include",
         headers: {
@@ -42,7 +44,6 @@ function Login() {
       >
         Log In
       </Button>
-      {/* <ClipLoader loading={loading} /> */}
       <Modal show={modalLogIn} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>Log In</Modal.Title>
