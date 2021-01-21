@@ -95,7 +95,7 @@ function Signup() {
     return (
       <div>
         <Button
-          className="modal-button btn btn-secondary my-2 my-sm-0 mr-4"
+          className="modal-button btn btn-primary my-2 my-sm-0 mr-4"
           type="button"
           onClick={handleModal}
         >

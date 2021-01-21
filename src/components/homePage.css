@@ -10,13 +10,15 @@ body {
   width: auto;
 }
 
+.collapse .navbar-collapse .d-flex .justify-content-between .navbar-nav {
+  position: relative;
+}
+
 .text-logo {
   margin-left: 1rem;
   font-family: "Oleo Script Swash Caps", cursive;
   font-size: 28px;
   color: #499df2;
-  /* color: #bf0404; */
-  /* color: #FE6084; */
 }
 
 .left-header {
@@ -29,6 +31,12 @@ body {
 .right-header {
   display: flex;
   flex-flow: row nowrap;
+  right: 147px;
+  position: absolute;
+}
+
+.form-inline {
+  margin-right: -110px;
 }
 
 .nav {
@@ -43,21 +51,17 @@ body {
   font-size: 20px;
   text-decoration: none;
 }
-/* <img id='heart' src={heartSignup} alt='dogs'/> */
+
 .navbar-light .navbar-nav .nav-link {
-  color: white ;
+  color: white;
   display: none;
 }
 
 .modal-button {
-  background-color: #499df2;
-  border-color: #499df2;
   color: white;
 }
 
 .button-log-sign {
-  background-color: #499df2;
-  border-color: #499df2;
   margin-left: 202px;
 }
 
@@ -66,15 +70,15 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-.image-home{
-    max-width: 170px;
-    max-height: 170px;
-    width: auto;
-    height: auto;
-    margin: 2rem auto
+.image-home {
+  max-width: 170px;
+  max-height: 170px;
+  width: auto;
+  height: auto;
+  margin: 2rem auto;
 }
 
-.addTest{
+.addTest {
   display: inline-flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -85,39 +89,45 @@ body {
   border-radius: 10px;
 }
 
-.testRight{
+.testRight {
   margin-right: 2rem;
 }
 
-.doctor{
+.doctor {
   max-height: 300px;
   max-width: 300px;
   height: auto;
   width: auto;
+  margin-right: 32px;
 }
 
-@media (max-width: 600px){
-    .heart-logo {
-        max-height: 40px;
-        max-width: 40px;
-        height: auto;
-        width: auto;
-    }
-    .text-logo {
-        margin-left: .5rem;
-        font-size: 20px;
-    }
-    .addTest{
-      display: inline-flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      color: white;
-      align-items: center;
-      border: 3px solid#202648;
-      padding: 2rem;
-      border-radius: 10px;
-    }
-    .testRight{
-      margin: 2rem 0;
-    }
+.sign-up {
+  right: -96px;
+  position: absolute;
+}
+
+@media (max-width: 600px) {
+  .heart-logo {
+    max-height: 40px;
+    max-width: 40px;
+    height: auto;
+    width: auto;
+  }
+  .text-logo {
+    margin-left: 0.5rem;
+    font-size: 20px;
+  }
+  .addTest {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border: 3px solid#202648;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  .testRight {
+    margin: 2rem 0;
+  }
 }
