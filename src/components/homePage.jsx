@@ -10,9 +10,7 @@ import { HeartContext } from "../libs/HeartContext";
 import "./homePage.css";
 import "./mobile.css";
 import { Nav, Navbar, Image, Button, NavDropdown } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { bars } from "@fortawesome/free-solid-svg-icons";
-
+import { FaBars } from "react-icons/fa";
 
 function HomePage() {
   const [loading, setLoading] = useState(false);
@@ -64,21 +62,19 @@ function HomePage() {
                       <Link className=" nav" to="/result">
                         Result
                       </Link>
-                    ) : 
-                    null}
+                    ) : null}
                     {isLogin ? (
                       <Link className=" nav" to="/dashboard">
                         Dashboard
                       </Link>
-                    ) : 
-                    null}
+                    ) : null}
                     {isLogin ? (
                       <Button
                         className="sign-up"
                         type="submit"
                         onClick={Logout}
                       >
-                        Log out{" "}
+                        Log out
                       </Button>
                     ) : (
                       <form className="form-inline my-2 my-lg-0 float-end">
@@ -91,17 +87,18 @@ function HomePage() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                       <Nav className="mr-auto">
-                        {/* <FontAwesomeIcon icon={["far", "bars"]} /> */}
-                        <NavDropdown title="menu" id="collasible-nav-dropdown">
-                          <Link className="mobile-link" to="/home">
-                            Home
-                          </Link>
-                          <Link className="mobile-link" to="/result">
-                            Result
-                          </Link>
-                          <Link className="mobile-link" to="/dashboard">
-                            Dashboard
-                          </Link>
+                        <NavDropdown className="navDropdown" title={<FaBars className="nav-icon"/>}>
+                          <div className="navDropdown-box">
+                            <Link className="mobile-link" to="/home">
+                              Home
+                            </Link>
+                            <Link className="mobile-link" to="/result">
+                              Result
+                            </Link>
+                            <Link className="mobile-link" to="/dashboard">
+                              Dashboard
+                            </Link>
+                          </div>
                           {/* <NavDropdown.Item href="#home">Home</NavDropdown.Item>
                           <NavDropdown.Item href="#result">
                             Result

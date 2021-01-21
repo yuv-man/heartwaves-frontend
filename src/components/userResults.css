@@ -8,8 +8,11 @@
 
 @media (max-width: 414px) {
 .results-card{
-    margin-left: 64px;
+    /* margin-left: 64px;
+    margin-top: 10px; */
+        margin-left: 30px;
     margin-top: 10px;
+
 }
 }
 

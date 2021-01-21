@@ -45,7 +45,7 @@ body {
 }
 /* <img id='heart' src={heartSignup} alt='dogs'/> */
 .navbar-light .navbar-nav .nav-link {
-  color: white ;
+  color: white;
   display: none;
 }
 
@@ -66,15 +66,15 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-.image-home{
-    max-width: 170px;
-    max-height: 170px;
-    width: auto;
-    height: auto;
-    margin: 2rem auto
+.image-home {
+  max-width: 170px;
+  max-height: 170px;
+  width: auto;
+  height: auto;
+  margin: 2rem auto;
 }
 
-.addTest{
+.addTest {
   display: inline-flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -85,39 +85,40 @@ body {
   border-radius: 10px;
 }
 
-.testRight{
+.testRight {
   margin-right: 2rem;
 }
 
-.doctor{
+.doctor {
   max-height: 300px;
   max-width: 300px;
   height: auto;
   width: auto;
+  margin-right: 32px;
 }
 
-@media (max-width: 600px){
-    .heart-logo {
-        max-height: 40px;
-        max-width: 40px;
-        height: auto;
-        width: auto;
-    }
-    .text-logo {
-        margin-left: .5rem;
-        font-size: 20px;
-    }
-    .addTest{
-      display: inline-flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      color: white;
-      align-items: center;
-      border: 3px solid#202648;
-      padding: 2rem;
-      border-radius: 10px;
-    }
-    .testRight{
-      margin: 2rem 0;
-    }
+@media (max-width: 600px) {
+  .heart-logo {
+    max-height: 40px;
+    max-width: 40px;
+    height: auto;
+    width: auto;
+  }
+  .text-logo {
+    margin-left: 0.5rem;
+    font-size: 20px;
+  }
+  .addTest {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border: 3px solid#202648;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  .testRight {
+    margin: 2rem 0;
+  }
 }
