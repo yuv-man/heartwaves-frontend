@@ -1,7 +1,9 @@
 import React, { useState , useEffect } from 'react'
 import UserResults from "./UserResults";
 import axios from "axios";
-import { Row } from "react-bootstrap";
+import { Row, Col, Card, Button } from "react-bootstrap";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+
 
 
 
@@ -19,13 +21,30 @@ function Dashboard () {
 
 
     return (
-      <div className="container">
+      <div className="container  my-5">
         <Row>
-          {/* {userResults.map((result) => (
-            <UserResults key={result.id} result={result} />
-          )
-          )} */}
-                <UserResults></UserResults>
+                <Col >
+                    <h1>Last result</h1>
+            <Card className="results-card">
+              <Card.Body>
+                <Card.Title>Date: </Card.Title>
+                <Card.Text> Test results: </Card.Text>
+                <Link variant="primary" to="/result">
+                  <Button className="button">see more</Button>
+                </Link>
+              </Card.Body>
+            </Card>
+          </Col>
+                <Col>
+                    <h1>History results</h1>
+            <Row>
+              {/* {userResults.map((result) => (
+                <UserResults key={result.id} result={result} />
+                )
+            )} */}
+              <UserResults></UserResults>
+            </Row>
+          </Col>
         </Row>
       </div>
     );
