@@ -39,6 +39,8 @@ function Signup() {
           const result = await signup( 
               userProfile.firstName, userProfile.lastName,
               userProfile.email, userProfile.phoneNumber, userProfile.password)
+          console.log(result)
+          setIsOpen(false);
   //         if(typeof result === 'object'){
   //             console.log(result[0])
   //             createToken( userProfile.email );
@@ -85,7 +87,7 @@ function Signup() {
           setLoading(false)
       }
       console.log(userProfile);
-      setIsOpen(false);
+      // setIsOpen(false);
   }
 
   useEffect(() => {
@@ -150,7 +152,6 @@ function Signup() {
                 <Form.Control
                   className="inputs"
                   type="password"
-                  //   placeholder="Your password."
                   name="password"
                   value={userProfile.password}
                   onChange={handleChange}
@@ -161,7 +162,6 @@ function Signup() {
                 <Form.Control
                   className="inputs"
                   type="password"
-                  //   placeholder="confirm password."
                   value={confirmPassword}
                   onChange={(event) => setConfirmPassword(event.target.value)}
                 />
@@ -188,6 +188,7 @@ function Signup() {
               >
                 Log In
               </Button>
+              <h3 className='error' >{message}</h3>
             </Form>
           </Modal.Body>
         </Modal>

@@ -51,17 +51,10 @@ background-color: black;
     margin-left: 12px;
   }
 
-<<<<<<< HEAD
   .mobile-link:hover{
         text-decoration: none;
         color: #499df2;
 
-=======
-  .mobile-link:hover {
-    text-decoration: none;
-    color: #499df2;
-    /* background-color: #0F143A; */
->>>>>>> 0f6237d47000ffccdbb70ebae010db608745cae2
   }
 
   .right-header {
