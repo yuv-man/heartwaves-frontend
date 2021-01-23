@@ -60,7 +60,7 @@ function HomePage() {
                     <Link className=" nav" to="/home">
                       Home
                     </Link>
-                    {isLogin ? (
+                    {testResult ? (
                       <Link className=" nav" to="/result">
                         Result
                       </Link>
