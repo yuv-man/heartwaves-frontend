@@ -14,7 +14,7 @@ import { FaBars } from "react-icons/fa";
 
 function HomePage() {
   const [loading, setLoading] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [currentUser, setCurrentUser] = useState();
   const [errorMessage, setErrorMessage] = useState(false);
   const [fullName, setFullName] = useState("");
