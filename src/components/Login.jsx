@@ -11,7 +11,7 @@ function Login() {
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
   const history = useHistory()
-  const BASE_URL = 'http://localhost:3001'   
+  const BASE_URL = 'https://heartwaves.herokuapp.com'   
     
   const openModalLogIn = () => setModalLogIn(true);
 

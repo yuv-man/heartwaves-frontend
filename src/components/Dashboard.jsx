@@ -5,9 +5,6 @@ import { Row, Col, Card, Button } from "react-bootstrap";
 import { BrowserRouter as Router, Link, useHistory } from "react-router-dom";
 import { postRecords } from '../libs/util'
 
-
-
-
 function Dashboard() {
   const [userResults, setUserResults] = useState([])
   const history = useHistory();
@@ -34,9 +31,7 @@ function Dashboard() {
             <Card.Body>
               <Card.Title>Date:{userResults.length > 0 && userResults[0].date} </Card.Title>
               <Card.Text> Test results:{userResults.length > 0 && userResults[0].heartData['beat name']} </Card.Text>
-              {/* <Link variant="primary" to={`/result/${userResults.length > 0 && userResults[0].userId}`}> */}
               <Button className="button" onClick={handleResultClick}>see more</Button>
-              {/* </Link> */}
             </Card.Body>
           </Card>
         </Col>
@@ -47,7 +42,6 @@ function Dashboard() {
               <UserResults key={result._id} result={result} />
             )
             )}
-            {/* <UserResults></UserResults> */}
           </Row>
         </Col>
       </Row>

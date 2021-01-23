@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import { HeartContext } from "../libs/HeartContext";
-import { Card, Row, Button, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import heartHome from '../images/heart-home.png'
 import doctor from '../images/doctor.png'
 import { postData } from '../libs/util'
 
 function Home() {
-    const { isLogin, firstName,testResult, setTestResult } = useContext(HeartContext);
+    const { isLogin, firstName, setTestResult } = useContext(HeartContext);
     const [ testFile, setTestFile ] = useState()
 
     const handleFile = (event) => {

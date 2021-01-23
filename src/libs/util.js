@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001'
+const BASE_URL = 'https://heartwaves.herokuapp.com'
 
 const signup = async( firstName, lastName, email, phone, password, confirmPassword ) =>{
     const fullName = `${firstName} ${lastName}`

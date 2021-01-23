@@ -22,7 +22,6 @@ function HomePage() {
 
   const Logout = () => {
     setIsLogin(false);
-    // localStorage.setItem('token', null)
   };
 
   return (

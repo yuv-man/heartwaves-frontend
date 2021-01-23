@@ -82,7 +82,6 @@ function Result(props) {
   return (
     <div className="container w-50 resultsCard" >
       <Card id='result'>
-        {/* <Card.Header></Card.Header> */}
         <Card.Body>
           <Card.Title>Hey {fullName} </Card.Title>
           <Card.Title>Test result: {problem} </Card.Title>
